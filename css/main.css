@@ -6,9 +6,10 @@
   --burgundy: #462749;
 }
 
+
 h1 {
   font-family: 'Sintony', sans-serif;
-  font-size: 60px;
+  font-size: 100px;
 }
 
 h2 {
@@ -17,6 +18,86 @@ h2 {
 }
 
 p {
+  text-align: center;
   font-family: 'Sintony', sans-serif;
   font-size: 18px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  border-top: solid 1px #000;
+  text-align: center;
+  padding: 2%
+}
+
+.title {
+  background-color: var(--blue);
+  color: var(--white);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timeline-nav {
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 10vh;
+  z-index: 1;
+}
+
+#content-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.panel {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+}
+
+.intro {
+  background-color: var(--vanilla);
+  color: #000;
+}
+
+.menstruation-start {
+  background-color: var(--orchid);
+  color: var(--white);
+}
+
+.follicular-phase {
+  background-color: var(--burgundy);
+  color: var(--white);
+}
+
+.ovulation {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.luteal-phase {
+  background-color: var(--vanilla);
+  color: #000;
+}
+
+.menstruation-end {
+  background-color: var(--orchid);
+  color: var(--white);
+}
+
+.conclusion {
+  background-color: var(--burgundy);
+  color: var(--white);
+  z-index: 2;
 }
