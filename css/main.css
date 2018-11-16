@@ -27,26 +27,10 @@ p {
   font-size: 18px;
 }
 
-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 footer {
   border-top: solid 1px #000;
   text-align: center;
   padding: 2%
-}
-
-.title {
-  background-color: var(--blue);
-  color: var(--white);
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .timeline-nav {
@@ -56,25 +40,38 @@ footer {
   align-items: center;
   position: absolute;
   width: 100vw;
+  height: 10vh;
   bottom: 0%;
+  left: 200%;
+  z-index: 1;
 }
 
 #content-container {
-  width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  width: 1400vw;
+  display: flex;
 }
 
 .panel {
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  height: 90vh;
+  width: 200vw;
+}
+
+.title {
+  background-color: var(--blue);
+  color: var(--white);
+  width: 100vw;
+  height: 100vh;
 }
 
 .intro {
   background-color: var(--vanilla);
   color: #000;
+  height: 100vh;
 }
 
 .menstruation-start {
@@ -105,5 +102,6 @@ footer {
 .conclusion {
   background-color: var(--burgundy);
   color: var(--white);
-  z-index: 2;
+  height: 100vh;
+  width: 100vw;
 }
