@@ -38,11 +38,11 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  position: absolute;
   width: 100vw;
   height: 10vh;
+  bottom: 0%;
+  left: 300%;
   z-index: 1;
 }
 
@@ -54,7 +54,7 @@ footer {
 
 .panel {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
   height: 90vh;
