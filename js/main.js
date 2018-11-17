@@ -4,17 +4,17 @@ $(document).ready(function () {
   var controller = new ScrollMagic.Controller();
 
   // animate scroll instead of a jump
-  controller.scrollTo(function(target) {
+  controller.scrollTo(function(i, newpos) {
+    console.log(newpos);
     console.log('scroooooll');
-    console.log('target = '+target); // BUT HERE IT IS 0 :cry:
-    console.log(typeof(target));
-    /*TweenMax.to(window, 0.5, { // .5 is scroll speed
+    console.log('newpos = '+newpos); // BUT HERE IT IS 0 :cry:
+    console.log(typeof(newpos));
+    TweenMax.to(window, 1, { // scroll speed
       scrollTo: {
-        y: id,        // scroll along y axis
-        autoKill: true,   // allow users to kill scroll action
+        x: newpos,        // scroll along x axis
       },
       ease: Cubic.easeInOut,
-    });*/
+    });
   });
 
   // scroll action when you click the nav links
@@ -25,7 +25,7 @@ $(document).ready(function () {
       console.log('click');
       console.log('id = '+id); // IT PRINTS CORRECT HERE
       console.log(typeof(id));
-      controller.scrollTo(id); // scroll on click
+      controller.scrollTo(0, id); // scroll on click
       // update the URL
       if (window.history && window.history.pushState) {
         history.pushState("", document.title, id);
