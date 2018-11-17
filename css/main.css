@@ -38,11 +38,11 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  position: absolute;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100vw;
   height: 10vh;
-  bottom: 0%;
-  left: 200%;
   z-index: 1;
 }
 
