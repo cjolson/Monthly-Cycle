@@ -36,8 +36,20 @@ p {
   width: 100vw;
   height: 8vh;
   bottom: 0%;
-  left: 300%;
+  left: 250%;
   z-index: 1;
+}
+
+.timeline-nav > a {
+  flex-grow: 1;
+}
+
+.anchor-link {
+  text-align: center;
+}
+
+.anchor-link > h2 {
+  font-size: 22px;
 }
 
 #content-container {

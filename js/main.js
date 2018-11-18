@@ -33,14 +33,14 @@ $(document).ready(function () {
   var pin_timeline =   new ScrollMagic.Scene({
     triggerElement: '.timeline-nav',
     triggerHook: '0',
-    duration: '900%',
+    duration: '950%',
   })
   .setPin('.timeline-nav')
   .addIndicators()
   .addTo(controller);
 
   var fade_in = new TweenMax.fromTo('.timeline-nav', 1.5,
-    {autoAlpha:0}, {autoAlpha:1}
+    {autoAlpha:0}, {autoAlpha:1},
   );
 
   var fade_in_timeline = new ScrollMagic.Scene({
