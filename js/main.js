@@ -33,7 +33,7 @@ $(document).ready(function () {
   var pin_timeline =   new ScrollMagic.Scene({
     triggerElement: '.timeline-nav',
     triggerHook: '0',
-    duration: '950%',
+    duration: '1000%',
   })
   .setPin('.timeline-nav')
   .addIndicators()
@@ -46,10 +46,13 @@ $(document).ready(function () {
   var fade_in_timeline = new ScrollMagic.Scene({
     triggerElement: '.timeline-nav',
     triggerHook: .2,
-    duration: '50%',
+    duration: '100%',
   })
   .setTween(fade_in)
   .addIndicators()
   .addTo(controller);
+
+
+
 
 });

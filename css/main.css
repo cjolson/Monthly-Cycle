@@ -28,19 +28,25 @@ p {
 }
 
 .timeline-nav {
-  background-color: var(--white);
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column-reverse;
   position: absolute;
+  bottom: 0;
   width: 100vw;
-  height: 8vh;
-  bottom: 0%;
-  left: 250%;
+  left: 200%;
   z-index: 1;
 }
 
-.timeline-nav > a {
+.nav-links {
+  background-color: #aa6eab;
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 1;
+  width: 100vw;
+  align-items: center;
+}
+
+.nav-links > a {
   flex-grow: 1;
 }
 
@@ -50,12 +56,21 @@ p {
 
 .anchor-link > h2 {
   font-size: 22px;
+  color: white;
 }
 
-.timeline-nav > a:hover > .anchor-link > h2 {
+.nav-links > a:hover > .anchor-link > h2 {
   color: var(--orchid);
   transform: scale(1.2);
 }
+
+.graph {
+
+}
+
+.line {
+
+ }
 
 #content-container {
   height: 100vh;
@@ -64,6 +79,8 @@ p {
 }
 
 .panel {
+  background-color: var(--blue);
+  color: white;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -73,15 +90,15 @@ p {
 }
 
 .title {
+  /*
   background-color: var(--blue);
   color: var(--white);
+  */
   width: 100vw;
-  height: 100vh;
 }
 
+/*
 .intro {
-  background-color: var(--vanilla);
-  color: #000;
   height: 100vh;
 }
 
@@ -109,10 +126,7 @@ p {
   background-color: var(--orchid);
   color: var(--white);
 }
-
+*/
 .conclusion {
-  background-color: var(--burgundy);
-  color: var(--white);
-  height: 100vh;
   width: 100vw;
 }
