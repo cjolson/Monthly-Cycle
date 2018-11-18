@@ -27,12 +27,6 @@ p {
   font-size: 18px;
 }
 
-footer {
-  border-top: solid 1px #000;
-  text-align: center;
-  padding: 2%
-}
-
 .timeline-nav {
   background-color: var(--white);
   display: flex;
@@ -40,7 +34,7 @@ footer {
   align-items: center;
   position: absolute;
   width: 100vw;
-  height: 10vh;
+  height: 8vh;
   bottom: 0%;
   left: 300%;
   z-index: 1;
@@ -57,7 +51,7 @@ footer {
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  height: 90vh;
+  height: 100vh;
   width: 200vw;
 }
 
