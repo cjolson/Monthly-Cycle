@@ -33,17 +33,14 @@ p {
   position: absolute;
   bottom: 0;
   width: 100vw;
-  left: 200%;
+  left: 100%;
   z-index: 1;
 }
 
 .nav-links {
-  background-color: #aa6eab;
   display: flex;
-  justify-content: space-around;
-  flex-grow: 1;
   width: 100vw;
-  align-items: center;
+  background-color: #aa6eab;
 }
 
 .nav-links > a {
@@ -54,27 +51,48 @@ p {
   text-align: center;
 }
 
+.anchor-link.men {
+  width: 14vw;
+}
+
+.anchor-link.fp {
+  width: 29vw;
+}
+
+.anchor-link.ov {
+  width: 14vw;
+}
+
+.anchor-link.lp {
+  width: 43vw;
+}
+
 .anchor-link > h2 {
   font-size: 22px;
   color: white;
 }
 
 .nav-links > a:hover > .anchor-link > h2 {
-  color: var(--orchid);
+  color: var(--vanilla);
   transform: scale(1.2);
 }
 
-.graph {
-
+#uterine-wall {
+  width: 0%;
+  overflow: hidden;
 }
 
-.line {
+#uterine-wall > img {
+  width: 100vw;
+}
 
- }
+.graph {
+  width: 100vw;
+}
 
 #content-container {
   height: 100vh;
-  width: 1400vw;
+  width: 1800vw;
   display: flex;
 }
 
@@ -86,47 +104,24 @@ p {
   align-items: center;
   text-align: center;
   height: 100vh;
+}
+
+.menstruation-start,
+.ovulation {
   width: 200vw;
 }
 
-.title {
-  /*
-  background-color: var(--blue);
-  color: var(--white);
-  */
-  width: 100vw;
-}
-
-/*
-.intro {
-  height: 100vh;
-}
-
-.menstruation-start {
-  background-color: var(--orchid);
-  color: var(--white);
-}
-
 .follicular-phase {
-  background-color: var(--burgundy);
-  color: var(--white);
-}
-
-.ovulation {
-  background-color: var(--blue);
-  color: var(--white);
+  width: 400vw;
 }
 
 .luteal-phase {
-  background-color: var(--vanilla);
-  color: #000;
+  width: 600vw;
 }
 
-.menstruation-end {
-  background-color: var(--orchid);
-  color: var(--white);
-}
-*/
+.title,
+.intro,
+.menstruation-end,
 .conclusion {
   width: 100vw;
 }

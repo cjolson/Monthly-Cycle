@@ -33,26 +33,55 @@ $(document).ready(function () {
   var pin_timeline =   new ScrollMagic.Scene({
     triggerElement: '.timeline-nav',
     triggerHook: '0',
-    duration: '1000%',
+    //duration: '1000%',
   })
   .setPin('.timeline-nav')
-  .addIndicators()
   .addTo(controller);
 
-  var fade_in = new TweenMax.fromTo('.timeline-nav', 1.5,
+  var fade_in = new TweenMax.fromTo('.timeline-nav', 1,
     {autoAlpha:0}, {autoAlpha:1},
   );
 
   var fade_in_timeline = new ScrollMagic.Scene({
     triggerElement: '.timeline-nav',
-    triggerHook: .2,
+    triggerHook: .4,
     duration: '100%',
   })
   .setTween(fade_in)
-  .addIndicators()
   .addTo(controller);
 
+  var uterus_grow = new TweenMax.fromTo('#uterine-wall', 1,
+    {width: 0}, {width: '100vw', ease: Linear.easeNone},
+  );
 
+  var uterus = new ScrollMagic.Scene({
+    triggerElement: '#menstruation-start',
+    duration: '1400%',
+    tweenChanges: true,
+  })
+  .setTween(uterus_grow)
+  .addTo(controller);
 
+  function pathPrepare($el) {
+    var lineLength = $el[0].getTotalLength();
+    $el.css("stroke-dasharray", lineLength);
+    $el.css("stroke-dashoffset", lineLength);
+  }
+
+  $('path').each(function() {
+    pathPrepare($(this));
+    var draw = new TimelineMax()
+          .add(TweenMax.to(
+            this, 1,
+            {strokeDashoffset: 0, ease: Linear.easeNone }
+          )); // draw word for 0.9
+    var draw_line = new ScrollMagic.Scene({
+      triggerElement: '#menstruation-start',
+      duration: '1400%',
+      tweenChanges: true
+    })
+    .setTween(draw)
+    .addTo(controller);
+  });
 
 });
