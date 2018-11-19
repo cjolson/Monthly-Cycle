@@ -17,7 +17,8 @@
   </head>
   <body>
     <nav class="timeline-nav">
-
+      <!-- Navigation at the bottom of the page.
+            Also labels for each stage. -->
       <div class="nav-links">
         <a href="#menstruation-start">
           <div class="anchor-link men"><h2>Menstruation</h2></div>
@@ -32,65 +33,71 @@
           <div class="anchor-link lp"><h2>Luteal Phase</h2></div>
         </a>
       </div>
-
-
+      <!-- Image of the uterine wall. -->
       <div id="uterine-wall">
         <img src="./img/SVG/uterine-wall.svg"></img>
       </div>
-
+      <!-- Image of the hormone graph. -->
       <div class="graph">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920.56 211.4">
           <defs>
             <style>
-            .cls-1,.cls-2,.cls-3,.cls-4{fill:none;stroke-miterlimit:10;stroke-width:3px;}
-            .cls-1{stroke:#aa6eab;}
-            .cls-2{stroke:#fafae6;}
-            .cls-3{stroke:#e4e3b5;}
-            .cls-4{stroke:#d6b2cf;}
-          </style>
-        </defs>
-        <title>graph</title>
-        <g id="Layer_2" data-name="Layer 2">
-          <g id="Graphs">
-            <path class="cls-1" d="M.17,208.07c1509.19,0,1189.27-184,1510.83-184,257.25,0,257.68,186.33,409.17,186.33"/>
-            <path class="cls-2" d="M.38,173.45s127.19-22.57,251.53-22.57,347.28,22.57,508.78,22.57,87.18-75.82,142.92-75.82,81.46,90.71,510.2,93.42,506.36-17.9,506.36-17.9"/>
-            <path class="cls-3" d="M.17,198.76s67.38-7.71,127.4-7.71S562,199.17,687.8,199.17C893.6,199.17,853.58,1.5,913.61,1.5s-54.31,205.79,606,205.79c134.34,0,400.6-7.37,400.6-7.37"/>
-            <path class="cls-4" d="M.17,188.28c786,0,721.93-172.34,839.12-172.34s108.62,163.37,197.23,163.37S1270.9,120.64,1431,120.64s303.42,67.64,489.21,67.64"/>
+              .cls-1,.cls-2,.cls-3,.cls-4{fill:none;stroke-miterlimit:10;stroke-width:3px;}
+              .cls-1{stroke:#aa6eab;}
+              .cls-2{stroke:#fafae6;}
+              .cls-3{stroke:#e4e3b5;}
+              .cls-4{stroke:#d6b2cf;}
+            </style>
+          </defs>
+          <title>graph</title>
+          <g id="Layer_2" data-name="Layer 2">
+            <g id="Graphs">
+              <path class="cls-1" d="M.17,208.07c1509.19,0,1189.27-184,1510.83-184,257.25,0,257.68,186.33,409.17,186.33"/>
+              <path class="cls-2" d="M.38,173.45s127.19-22.57,251.53-22.57,347.28,22.57,508.78,22.57,87.18-75.82,142.92-75.82,81.46,90.71,510.2,93.42,506.36-17.9,506.36-17.9"/>
+              <path class="cls-3" d="M.17,198.76s67.38-7.71,127.4-7.71S562,199.17,687.8,199.17C893.6,199.17,853.58,1.5,913.61,1.5s-54.31,205.79,606,205.79c134.34,0,400.6-7.37,400.6-7.37"/>
+              <path class="cls-4" d="M.17,188.28c786,0,721.93-172.34,839.12-172.34s108.62,163.37,197.23,163.37S1270.9,120.64,1431,120.64s303.42,67.64,489.21,67.64"/>
+            </g>
           </g>
-        </g>
         </svg>
       </div>
     </nav>
 
+    <div class="hormones">
+      <div class="fsh"><h2>FSH</h2></div>
+      <div class="lh"><h2>LH</h2></div>
+      <div class="estrogen"><h2>Estrogen</h2></div>
+      <div class="progesterone"><h2>Progesterone</h2></div>
+    </div>
+
     <main id="content-container">
-
       <section class='panel title'>
-        <h1>A Monthly Cycle</h1>
+        <div class="text">
+          <h1>A Monthly Cycle</h1>
+          <p>Scroll Horizontal -></p>
+        </div>
       </section>
-
       <section id="intro" class="panel intro">
         <div class="text">
           <p>Aunt Flo, the crimson wave, shark week, and that time of the
-            month.</p>
+            month...</p>
           <p>Menstruation.</p>
           <p>Rarely referred to by name—more commonly by euphemism—periods are
             clouded by a cultural taboo and often misunderstood even by the
             women who experience them monthly.</p>
         </div>
       </section>
-
       <section id="menstruation-start" class="panel menstruation-start">
+        <div class="heading"><h2>Menstruation</h2></div>
         <div class="text">
-          <h2>Menstruation</h2>
           <p>The entire system is regulated by a group of hormones. The brain
-            tells the pituitary gland to produce two hormones specifically called
-            ollicle-stimulating hormone (FSH) and luteinizing hormone (LH).</p>
+            tells the pituitary gland to produce two hormones specifically
+            called follicle-stimulating hormone (FSH) and luteinizing hormone
+            (LH).</p>
           <p>On day one—otherwise known as the first day of the period and the
             start of the “Follicular Phase”—FSH is rising a little and LH is
             still low. FSH travels to the ovaries through the bloodstream.</p>
         </div>
       </section>
-
       <section id="follicular-phase" class="panel follicular-phase">
         <div class="text">
           <h2>Follicular Phase</h2>
@@ -110,17 +117,16 @@
             that the egg is fertilized.</p>
         </div>
       </section>
-
       <section id="ovulation" class="panel ovulation">
         <div class="text">
           <h2>Ovulation</h2>
-          <p>Eventually, estrogen will reach peak levels. Once it is sufficiently
-            high, it triggers a surge in production of LH and a slight bump in FSH.
-            The two together travel to the ovaries and trigger the release of the egg
-            from the matured most dominant follicle. This is known as ovulation.</p>
+          <p>Eventually, estrogen will reach peak levels. Once it is
+            sufficiently high, it triggers a surge in production of LH and a
+            slight bump in FSH. The two together travel to the ovaries and
+            trigger the release of the egg from the matured most dominant
+            follicle. This is known as ovulation.</p>
         </div>
       </section>
-
       <section id="luteal-phase" class="panel luteal-phase">
         <div class="text">
           <h2>Luteal Phase</h2>
@@ -140,7 +146,6 @@
             levels of both will fall. </p>
         </div>
       </section>
-
       <section id="menstruation-end" class="panel menstruation-end">
         <div class="text">
           <h2>Menstruation</h2>
@@ -150,13 +155,11 @@
             the period.</p>
         </div>
       </section>
-
       <section id="conclusion" class="panel conclusion">
         <div  class="text">
           <h2>Goodbye</h2>
         </div>
       </section>
-
     </main>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

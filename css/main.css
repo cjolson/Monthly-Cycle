@@ -72,7 +72,7 @@ p {
   color: white;
 }
 
-.nav-links > a:hover > .anchor-link > h2 {
+.nav-links a:hover > .anchor-link h2 {
   color: var(--vanilla);
   transform: scale(1.2);
 }
@@ -90,6 +90,33 @@ p {
   width: 100vw;
 }
 
+.hormones{
+  position: absolute;
+  display: flex;
+  left: 100%;
+  z-index: 1;
+  justify-content: space-around;
+  flex-grow: 1;
+  width: 100vw;
+}
+
+.fsh {
+  color: #aa6eab;
+}
+
+.lh {
+  color: #e4e3b5;
+}
+
+.estrogen {
+  color: #d6b2cf ;
+}
+
+.progesterone {
+  color: #fafae6;
+}
+
+
 #content-container {
   height: 100vh;
   width: 1800vw;
@@ -97,13 +124,24 @@ p {
 }
 
 .panel {
-  background-color: var(--blue);
-  color: white;
   display: flex;
   justify-content: space-around;
   align-items: center;
   text-align: center;
+  background-color: var(--blue);
+  color: white;
   height: 100vh;
+}
+
+.intro {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+
+.text {
+  width: 60vw;
 }
 
 .menstruation-start,

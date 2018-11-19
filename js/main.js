@@ -31,6 +31,14 @@ $(document).ready(function () {
   });
 
   var pin_timeline =   new ScrollMagic.Scene({
+    triggerElement: '.hormones',
+    triggerHook: '0',
+    //duration: '1000%',
+  })
+  .setPin('.hormones')
+  .addTo(controller);
+
+  var pin_timeline =   new ScrollMagic.Scene({
     triggerElement: '.timeline-nav',
     triggerHook: '0',
     //duration: '1000%',
