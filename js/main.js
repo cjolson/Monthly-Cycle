@@ -30,7 +30,7 @@ $(document).ready(function () {
     }
   });
 
-  var pin_timeline =   new ScrollMagic.Scene({
+  var pin_hormones =   new ScrollMagic.Scene({
     triggerElement: '.hormones',
     triggerHook: '0',
     //duration: '1000%',
@@ -92,4 +92,7 @@ $(document).ready(function () {
     .addTo(controller);
   });
 
+  $('.hormones div').each(function () {
+    console.log(this);
+  });
 });
