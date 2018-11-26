@@ -5,21 +5,24 @@ $(document).ready(function () {
     globalSceneOptions: {
       reverse: true
     },
-    vertical: false
+    vertical: false,
+    logLevel: 3,
+    refreshInterval: 100,
   });
 
-  scrollingNavigation(controller);
-  pinItem('.hormones', 0, controller);
-  pinItem('.timeline-nav', 0, controller);
-  $('path').each(function() {drawPath(this, controller)});
 
-  var fade_in_timeline = new ScrollMagic.Scene({
-    triggerElement: '.timeline-nav',
-    triggerHook: .4,
-    duration: '100%',
-  })
-  .setTween(fadeInTween('.timeline-nav'))
-  .addTo(controller);
+  scrollingNavigation(controller);
+  controller.addScene([
+    pinItem('.hormones', 0),
+    pinItem('.timeline-nav',0),
+    fadeInItem('.timeline-nav', .4)
+  ]);
+
+  $('path').each(function() {
+    controller.addScene(drawPath(this))
+  });
+
+
 
   var uterus_grow = new TweenMax.fromTo('#uterine-wall', 1,
     {width: 0}, {width: '100vw', ease: Linear.easeNone},
@@ -33,9 +36,6 @@ $(document).ready(function () {
   .setTween(uterus_grow)
   .addTo(controller);
 });
-
-
-
 
 function scrollingNavigation(controller) {
   // animate scroll instead of a jump
@@ -60,6 +60,23 @@ function scrollingNavigation(controller) {
   });
 };
 
+function fadeInItem(item, hook) {
+  return new ScrollMagic.Scene({
+    triggerElement: item,
+    triggerHook: hook,
+    duration: '100%',
+  })
+  .setTween(fadeInTween(item))
+}
+
+function pinItem(item, hook) {
+  return pinned_item = new ScrollMagic.Scene({
+    triggerElement: item,
+    triggerHook: hook,
+  })
+  .setPin(item)
+}
+
 function fadeInTween(div) {
   return new TweenMax.fromTo(div, 1,
     {autoAlpha:0}, {autoAlpha:1},
@@ -72,27 +89,18 @@ function pathPrepare($el) {
   $el.css("stroke-dashoffset", lineLength);
 }
 
-function drawPath(path, controller) {
+function drawPath(path) {
   pathPrepare($(path));
   var draw = new TimelineMax()
                   .add(TweenMax.to(
                     path, 1,
                     {strokeDashoffset: 0, ease: Linear.easeNone }
                   )); // draw word for 0.9
-  var draw_line = new ScrollMagic.Scene({
+
+  return draw_line = new ScrollMagic.Scene({
     triggerElement: '#menstruation-start',
     duration: '1400%',
     tweenChanges: true
   })
   .setTween(draw)
-  .addTo(controller);
-}
-
-function pinItem(item, hook, controller) {
-  var pinned_item = new ScrollMagic.Scene({
-    triggerElement: item,
-    triggerHook: hook,
-  })
-  .setPin(item)
-  .addTo(controller);
 }
