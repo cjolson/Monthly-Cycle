@@ -21,8 +21,13 @@ h2 {
   font-size: 30px;
 }
 
+h3 {
+  font-family: 'Sintony', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
 p {
-  text-align: center;
   font-family: 'Sintony', sans-serif;
   font-size: 18px;
 }
@@ -52,29 +57,34 @@ p {
 }
 
 .anchor-link.men {
-  width: 14vw;
+  width: 12vw;
 }
 
 .anchor-link.fp {
-  width: 29vw;
+  width: 27vw;
 }
 
 .anchor-link.ov {
-  width: 14vw;
+  width: 12vw;
 }
 
 .anchor-link.lp {
-  width: 43vw;
+  width: 41vw;
+}
+
+.anchor-link.end {
+  width: 8vw;
 }
 
 .anchor-link > h2 {
   font-size: 22px;
   color: white;
+  transition: all .2s Linear;
 }
 
 .nav-links a:hover > .anchor-link h2 {
   color: var(--vanilla);
-  transform: scale(1.2);
+  transform: scale(1.3);
 }
 
 #uterine-wall {
@@ -98,28 +108,39 @@ p {
   justify-content: space-around;
   flex-grow: 1;
   width: 100vw;
+  margin-top: 40vh;
 }
 
-.fsh {
-  color: #aa6eab;
+.hormones > div {
+  flex-grow: 1;
+  text-align: center;
 }
 
-.lh {
-  color: #e4e3b5;
+.fsh-label {
+  color: #b3b386;
+  font-weight: 700;
 }
 
-.estrogen {
-  color: #d6b2cf ;
+.lh-label {
+  color: #f7f7c4;
+  font-weight: 700;
 }
 
-.progesterone {
-  color: #fafae6;
+.estrogen-label {
+  color: #d099c5;
+  font-weight: 700;
+}
+
+.progesterone-label {
+  color: #844c84;
+  font-weight: 700;
 }
 
 
 #content-container {
   height: 100vh;
   width: 1800vw;
+  background-color: var(--blue);
   display: flex;
 }
 
@@ -128,9 +149,8 @@ p {
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  background-color: var(--blue);
   color: white;
-  height: 100vh;
+  height: 40vh;
 }
 
 .intro {
@@ -141,7 +161,12 @@ p {
 }
 
 .text {
-  width: 60vw;
+  display: flex;
+  justify-content: space-around;
+}
+
+.text > p {
+  width: 40vw;
 }
 
 .menstruation-start,
@@ -157,7 +182,15 @@ p {
   width: 600vw;
 }
 
-.title,
+.title {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-around;
+}
+
 .intro,
 .menstruation-end,
 .conclusion {
