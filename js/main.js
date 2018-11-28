@@ -37,28 +37,7 @@ $(document).ready(function () {
   .addTo(controller);
 });
 
-function scrollingNavigation(controller) {
-  // animate scroll instead of a jump
-  controller.scrollTo(function(i, newpos) {
-    TweenMax.to(window, 1, { // scroll speed
-      scrollTo: {
-        x: newpos,           // scroll along x axis
-      },
-      ease: Cubic.easeInOut,
-    });
-  });
-  // scroll action when you click the nav links
-  $(document).on('click', 'a[href^=#]', function(e) {
-    var id = $(this).attr('href'); // get the href of clicked link
-    if ($(id).length > 0) { // not empty links
-      e.preventDefault(); // prevent normal link action
-      controller.scrollTo(0, id); // scroll on click
-      if (window.history && window.history.pushState) {
-        history.pushState("", document.title, id); // update the URL
-      }
-    }
-  });
-};
+
 
 function fadeInItem(item, hook) {
   return new ScrollMagic.Scene({
@@ -104,3 +83,26 @@ function drawPath(path) {
   })
   .setTween(draw)
 }
+
+function scrollingNavigation(controller) {
+  // animate scroll instead of a jump
+  controller.scrollTo(function(i, newpos) {
+    TweenMax.to(window, 1, { // scroll speed
+      scrollTo: {
+        x: newpos,           // scroll along x axis
+      },
+      ease: Cubic.easeInOut,
+    });
+  });
+  // scroll action when you click the nav links
+  $(document).on('click', 'a[href^=#]', function(e) {
+    var id = $(this).attr('href'); // get the href of clicked link
+    if ($(id).length > 0) { // not empty links
+      e.preventDefault(); // prevent normal link action
+      controller.scrollTo(0, id); // scroll on click
+      if (window.history && window.history.pushState) {
+        history.pushState("", document.title, id); // update the URL
+      }
+    }
+  });
+};
