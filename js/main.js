@@ -19,9 +19,12 @@ $(document).ready(function () {
   ]);
 
   $('path').each(function() {
-    controller.addScene(drawPath(this))
+    controller.addScene(drawPath(this));
   });
 
+  $('.hormone-text').each(function() {
+    controller.addScene(revealHormone(this));
+  });
 
 
   var uterus_grow = new TweenMax.fromTo('#uterine-wall', 1,
@@ -62,6 +65,12 @@ function fadeInTween(div) {
   );
 };
 
+function springGrow(div) {
+  return new TweenMax.from(div, 1,
+    {css: {scale: 0, opacity: 0, ease:  Circ.easeOut}
+  });
+}
+
 function pathPrepare($el) {
   var lineLength = $el[0].getTotalLength();
   $el.css("stroke-dasharray", lineLength);
@@ -72,7 +81,7 @@ function drawPath(path) {
   pathPrepare($(path));
   var draw = new TimelineMax()
                   .add(TweenMax.to(
-                    path, 1,
+                    path, .8,
                     {strokeDashoffset: 0, ease: Linear.easeNone }
                   )); // draw word for 0.9
 
@@ -81,8 +90,18 @@ function drawPath(path) {
     duration: '1400%',
     tweenChanges: true
   })
-  .setTween(draw)
-}
+  .setTween(draw);
+};
+
+function revealHormone(hormone) {
+  var class_name = $('.'+hormone.classList[0]);
+  var label_element = $('.hormones').find(class_name);
+  return new ScrollMagic.Scene({
+    triggerElement: hormone,
+    triggerHook: .8,
+  })
+  .setTween(springGrow(label_element))
+};
 
 function scrollingNavigation(controller) {
   // animate scroll instead of a jump

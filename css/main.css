@@ -18,13 +18,13 @@ h1 {
 
 h2 {
   font-family: 'Dancing Script', cursive;
-  font-size: 30px;
+  font-size: 36px;
 }
 
 h3 {
-  font-family: 'Sintony', sans-serif;
+  font-family: 'Dancing Script', cursive;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 28px;
 }
 
 p {
@@ -79,7 +79,7 @@ p {
 .anchor-link > h2 {
   font-size: 22px;
   color: white;
-  transition: all .2s Linear;
+  transition: all .1s Linear;
 }
 
 .nav-links a:hover > .anchor-link h2 {
@@ -136,7 +136,6 @@ p {
   font-weight: 700;
 }
 
-
 #content-container {
   height: 100vh;
   width: 1800vw;
@@ -151,6 +150,32 @@ p {
   text-align: center;
   color: white;
   height: 40vh;
+  /*-border: solid 0.5px white;*/
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  text-align: center;
+}
+
+.text {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin: 2% auto;
+}
+
+.text > p {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-heading {
+  text-align: center;
+  margin: 0 auto;
 }
 
 .intro {
@@ -158,11 +183,6 @@ p {
   justify-content: space-around;
   align-items: center;
   text-align: center;
-}
-
-.text {
-  display: flex;
-  justify-content: space-around;
 }
 
 .text > p {
