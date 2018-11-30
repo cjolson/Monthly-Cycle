@@ -138,47 +138,36 @@ p {
 
 #content-container {
   height: 100vh;
-  width: 1800vw;
+  width: 2100vw;
   background-color: var(--blue);
   display: flex;
 }
 
 .panel {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
+
   color: white;
   height: 40vh;
-  /*-border: solid 0.5px white;*/
+  border: solid 0.5px white;
+}
+
+.section-heading {
+  text-align: left;
 }
 
 .content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: flex-end;
-  text-align: center;
+
 }
 
 .text {
   display: flex;
-  justify-content: space-between;
-  text-align: center;
-  margin: 2% auto;
+  justify-content: space-around;
 }
 
 .text > p {
-  margin: 0 auto;
-  text-align: center;
+  text-align: left;
 }
 
-.section-heading {
-  text-align: center;
-  margin: 0 auto;
-}
-
-.intro {
+.title {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -190,6 +179,7 @@ p {
 }
 
 .menstruation-start,
+.menstruation-end,
 .ovulation {
   width: 200vw;
 }
@@ -212,7 +202,6 @@ p {
 }
 
 .intro,
-.menstruation-end,
 .conclusion {
   width: 100vw;
 }

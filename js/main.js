@@ -26,6 +26,17 @@ $(document).ready(function () {
     controller.addScene(revealHormone(this));
   });
 
+  $('.section-heading').each(function() {
+    controller.addScene([
+      pinItem(this, .2, $(this).parent().width() * .9),
+      fadeInItem(this, .9)
+    ]);
+  });
+
+  $('text').find('p').each(function() {
+    console.log(this);
+  });
+
 
   var uterus_grow = new TweenMax.fromTo('#uterine-wall', 1,
     {width: 0}, {width: '100vw', ease: Linear.easeNone},
@@ -33,7 +44,7 @@ $(document).ready(function () {
 
   var uterus = new ScrollMagic.Scene({
     triggerElement: '#menstruation-start',
-    duration: '1400%',
+    duration: '1300%',
     tweenChanges: true,
   })
   .setTween(uterus_grow)
@@ -51,10 +62,12 @@ function fadeInItem(item, hook) {
   .setTween(fadeInTween(item))
 }
 
-function pinItem(item, hook) {
+function pinItem(item, hook, width) {
+  var duration = width || 0;
   return pinned_item = new ScrollMagic.Scene({
     triggerElement: item,
     triggerHook: hook,
+    duration: duration,
   })
   .setPin(item)
 }
@@ -65,10 +78,13 @@ function fadeInTween(div) {
   );
 };
 
-function springGrow(div) {
-  return new TweenMax.from(div, 1,
-    {css: {scale: 0, opacity: 0, ease:  Circ.easeOut}
-  });
+function appear(div) {
+  return new TweenMax.from(
+    div,
+    .5,
+    {css: {scale: 0, opacity: 0}},
+    {ease: Sine.easeOut}
+  );
 }
 
 function pathPrepare($el) {
@@ -87,8 +103,8 @@ function drawPath(path) {
 
   return draw_line = new ScrollMagic.Scene({
     triggerElement: '#menstruation-start',
-    duration: '1400%',
-    tweenChanges: true
+    duration: '1300%',
+    tweenChanges: true,
   })
   .setTween(draw);
 };
@@ -100,7 +116,7 @@ function revealHormone(hormone) {
     triggerElement: hormone,
     triggerHook: .8,
   })
-  .setTween(springGrow(label_element))
+  .setTween(appear(label_element))
 };
 
 function scrollingNavigation(controller) {
