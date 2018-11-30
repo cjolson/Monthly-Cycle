@@ -146,23 +146,15 @@ p {
 .panel {
   color: white;
   height: 40vh;
-  border: solid 0.5px white;
 }
 
 .section-heading {
   text-align: left;
 }
 
-.content {
-}
-
 .text {
   display: flex;
   justify-content: space-around;
-}
-
-.text > p {
-  text-align: center;
 }
 
 .title {

@@ -28,13 +28,9 @@ $(document).ready(function () {
 
   $('.section-heading').each(function() {
     controller.addScene([
-      pinItem(this, .2, $(this).parent().width() * .9),
+      pinItem(this, .3, $(this).parent().width() * .9),
       fadeInItem(this, .9)
     ]);
-  });
-
-  $('text').find('p').each(function() {
-    console.log(this);
   });
 
 
