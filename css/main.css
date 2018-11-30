@@ -144,7 +144,6 @@ p {
 }
 
 .panel {
-
   color: white;
   height: 40vh;
   border: solid 0.5px white;
@@ -155,7 +154,6 @@ p {
 }
 
 .content {
-
 }
 
 .text {
@@ -164,7 +162,7 @@ p {
 }
 
 .text > p {
-  text-align: left;
+  text-align: center;
 }
 
 .title {
@@ -201,7 +199,17 @@ p {
   align-content: space-around;
 }
 
-.intro,
+.intro {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 300vw;
+    height: 40vh;
+}
+
 .conclusion {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   width: 100vw;
 }
